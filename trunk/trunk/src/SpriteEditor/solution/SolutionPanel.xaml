@@ -1,0 +1,25 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:tv="http://zigzag.net/zigzag/treeview"
+	mc:Ignorable="d"
+	x:Class="Zigzag.SpriteEditor.SolutionPanel"
+	x:Name="UserControl"
+	d:DesignWidth="281" d:DesignHeight="360">
+  
+  <DockPanel Margin="3">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+      <tv:SharpTreeView x:Name="m_SolutinTreeView"
+                              AllowDrop="True"
+                              AllowDropOrder="True"
+                              Grid.Column="0"
+                              ShowAlternation="True"
+                              Root="{Binding TreeRoot}"/>
+    </Grid>
+  </DockPanel>
+</UserControl>

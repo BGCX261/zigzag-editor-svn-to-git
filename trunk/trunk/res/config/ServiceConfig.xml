@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Include>
+  <Info>
+    <Name>ServiceConfig</Name>
+    <Author>Lee</Author>
+    <Date>2013.12.28</Date>
+    <Description>Global Service Manager</Description>
+  </Info>
+
+  <Config>
+    <Service>
+      <Class>LogService.xml</Class>
+      <Assembly></Assembly>
+    </Service>
+  </Config>
+</Include>
+
+

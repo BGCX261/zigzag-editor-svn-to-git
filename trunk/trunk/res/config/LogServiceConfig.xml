@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Include>
+  <Info>
+    <Name>LogServiceConfig</Name>
+    <Author>Lee</Author>
+    <Date>2013.12.28</Date>
+    <Description>Config log info</Description>
+  </Info>
+  <Config>
+    <LogLevel>0</LogLevel>
+  </Config>
+</Include>
+
+

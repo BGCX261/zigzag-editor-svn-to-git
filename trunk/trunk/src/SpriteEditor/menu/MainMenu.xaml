@@ -1,0 +1,55 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Zigzag.SpriteEditor.MainMenu"
+	x:Name="UserControl"
+	d:DesignWidth="378" d:DesignHeight="20">
+  <Grid Margin="0,0,0,0" Height="20" VerticalAlignment="Top">
+    <Menu x:Name="m_MainMenu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="Auto" Margin="0,0,0,0">
+      <MenuItem Header="File">
+        <MenuItem Header="New">
+          <MenuItem Header="Sprite" Command="{Binding NewSpriteCommand}"/>
+          <MenuItem Header="Project"/>
+        </MenuItem>
+        <MenuItem Header="Open">
+          <MenuItem Header="Sprite" Command="{Binding OpenSpriteCommand}"/>
+          <MenuItem Header="Project"/>
+        </MenuItem>
+        <MenuItem Header="Close"/>
+        <Separator/>
+        <MenuItem Header="Save"/>
+        <MenuItem Header="Save As"/>
+        <Separator/>
+        <MenuItem Header="Recent Files"/>
+        <MenuItem Header="Recent Projects"/>
+        <Separator/>
+        <MenuItem Header="Exit"/>
+      </MenuItem>
+      <MenuItem Header="Edit">
+        <MenuItem Header="Undo"/>
+        <MenuItem Header="Redo"/>
+        <Separator/>
+        <MenuItem Header="Cut"/>
+        <MenuItem Header="Copy"/>
+        <MenuItem Header="Paste"/>
+        <MenuItem Header="Delete"/>
+      </MenuItem>
+      <MenuItem Header="View">
+        <MenuItem Header="Workspace View"/>
+        <MenuItem Header="Property View"/>
+        <MenuItem Header="Console View"/>
+        <MenuItem Header="Build View"/>
+      </MenuItem>
+      <MenuItem Header="Build">
+        <MenuItem Header="Build All"/>
+      </MenuItem>
+      <MenuItem Header="Help">
+        <MenuItem Header="Document"/>
+        <MenuItem Header="About"/>
+      </MenuItem>
+    </Menu>
+  </Grid>
+</UserControl>

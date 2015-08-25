@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFD48591-D66C-47F3-86E7-ACE5AD3D4FE4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zigzag.SpriteEditor</RootNamespace>
+    <AssemblyName>Zigzag.SpriteEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Zigzag.SpriteEditor.MainStart</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="app\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="app\AppDefines.cs" />
+    <Compile Include="app\MainStart.cs" />
+    <Compile Include="app\StartupInfo.cs" />
+    <Compile Include="core\ActiveDocumentConverter.cs" />
+    <Compile Include="core\LayoutInitializer.cs" />
+    <Compile Include="core\PanesStyleSelector.cs" />
+    <Compile Include="core\PanesTemplateSelector.cs" />
+    <Compile Include="menu\MenuConfig.cs" />
+    <Compile Include="menu\MenuService.cs" />
+    <Compile Include="menu\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="property\PropertyPanel.xaml.cs">
+      <DependentUpon>PropertyPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="property\PropertyViewModel.cs" />
+    <Compile Include="solution\FileNode.cs" />
+    <Compile Include="solution\FileSystemNode.cs" />
+    <Compile Include="solution\FolderNode.cs" />
+    <Compile Include="solution\SolutionPanel.xaml.cs">
+      <DependentUpon>SolutionPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="solution\SolutionViewModel.cs" />
+    <Compile Include="sprite\SpritePanel.xaml.cs">
+      <DependentUpon>SpritePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sprite\SpriteViewModel.cs" />
+    <Compile Include="core\vm\PaneViewModel.cs" />
+    <Compile Include="core\vm\PadViewModel.cs" />
+    <Compile Include="workbench\WorkbenchService.cs" />
+    <Page Include="workbench\Workbench.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="app\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="workbench\Workbench.xaml.cs">
+      <DependentUpon>Workbench.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="menu\MainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="property\PropertyPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="solution\SolutionPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="sprite\SpritePanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\avalondock\Xceed.Wpf.AvalonDock.Themes.VS2010\Xceed.Wpf.AvalonDock.Themes.VS2010.csproj">
+      <Project>{B3FC3E21-5F2D-4581-AEA2-59F671CFFC21}</Project>
+      <Name>Xceed.Wpf.AvalonDock.Themes.VS2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\avalondock\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.csproj">
+      <Project>{DB81988F-E0F2-45A0-A1FD-8C37F3D35244}</Project>
+      <Name>Xceed.Wpf.AvalonDock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\common\Zigzag.Common.csproj">
+      <Project>{E30E23EA-B12E-415B-A657-88F08F47EBF1}</Project>
+      <Name>Zigzag.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\mvvm\GalaSoft.MvvmLight %28NET4%29\GalaSoft.MvvmLight %28NET4%29.csproj">
+      <Project>{E8EF2656-7165-42D1-9C46-63E66679808D}</Project>
+      <Name>GalaSoft.MvvmLight %28NET4%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\mvvm\GalaSoft.MvvmLight.Extras %28NET4%29\GalaSoft.MvvmLight.Extras %28NET4%29.csproj">
+      <Project>{4934C525-4BC4-400C-B5C8-E5B6CF7CBF7A}</Project>
+      <Name>GalaSoft.MvvmLight.Extras %28NET4%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\treeview\Zigzag.TreeView.csproj">
+      <Project>{DDE2A481-8271-4EAC-A330-8FA6A38D13D1}</Project>
+      <Name>Zigzag.TreeView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\images\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\images\property-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\images\File.png" />
+    <Resource Include="resources\images\Folder.png" />
+    <Resource Include="resources\images\FolderOpened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)..\..\res\* $(ProjectDir)..\..\bin\res /E /I /F /K /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

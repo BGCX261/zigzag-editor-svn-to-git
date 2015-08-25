@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Include>
+  <Info>
+    <Name>MenuServiceConfig</Name>
+    <Author>Lee</Author>
+    <Date>2013.12.29</Date>
+    <Description>Manage menus</Description>
+  </Info>
+  <Config>
+  </Config>
+</Include>
+
+
